@@ -1,0 +1,164 @@
+/* สไตล์ของ body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+}
+
+/* สไตล์ของ Header */
+.header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header-logo {
+    width: 50px;
+    margin-right: 15px; /* ระยะห่างระหว่างรูปแต่ละรูป */
+}
+
+/* สไตล์ของ Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 60px; /* เลื่อน navbar ลงมาจาก header */
+    width: 100%;
+    z-index: 900;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu li a:hover {
+    color: #4CAF50;
+}
+
+/* ฟอร์ม */
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px; /* ให้ฟอร์มเริ่มจากด้านล่าง navbar */
+}
+
+.form-logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* เพิ่มพื้นที่ด้านขวาเพื่อรองรับไอคอน */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* ควบคุมขนาดรวม padding และ border */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ไอคอนตา */
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* เพิ่มพื้นที่ด้านขวาเพื่อรองรับไอคอน */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* ควบคุมขนาดรวม padding และ border */
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px; /* ขนาดของไอคอนตา */
+    color: #333;
+}

@@ -1,0 +1,199 @@
+/* สไตล์ของ Header */
+.header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header-logo {
+    width: 50px;
+    margin-right: 15px; /* ระยะห่างระหว่างรูปแต่ละรูป */
+}
+
+/* สไตล์ของ ห้องแชท */
+.chat-room {
+    margin-top: 80px; /* เพิ่มระยะห่างจาก header */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวข้อของห้องแชท */
+.chat-room h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.chat-room p {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+/* สไตล์ของข้อความ */
+.messages-container {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column; /* จัดข้อความจากบนลงล่าง */
+}
+
+/* สไตล์สำหรับแต่ละข้อความ */
+.message {
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 70%; /* กำหนดความกว้างสูงสุด */
+    text-align: left;
+    position: relative;
+    border: 2px solid transparent; /* กรอบเริ่มต้นจะโปร่งใส */
+}
+
+/* สำหรับข้อความของเรา (ผู้ใช้) อยู่ทางขวา */
+.message.left {
+    background-color: #70ff74; /* สีพื้นหลังของข้อความผู้ใช้ */
+    margin-left: auto; /* ทำให้ข้อความของเราอยู่ขวา */
+    margin-right: 0;
+    text-align: left;
+    border-color: #4CAF50; /* กรอบสีเขียว */
+}
+
+/* สำหรับข้อความของคนอื่น (ผู้อื่น) อยู่ทางซ้าย */
+.message.right {
+    background-color: #88c2ff; /* สีพื้นหลังของข้อความคนอื่น */
+    margin-left: 0;
+    margin-right: auto; /* ทำให้ข้อความคนอื่นอยู่ซ้าย */
+    text-align: left;
+    border-color: #0056b3; /* กรอบสีเขียว */
+}
+
+/* สไตล์สำหรับชื่อผู้ส่ง */
+.message strong {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* สไตล์สำหรับข้อความ */
+.message p {
+    margin: 0;
+    color: #333;
+    text-align: left;
+}
+
+/* สไตล์ของฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* ลดระยะห่างระหว่างข้อความและปุ่ม */
+    width: 100%; /* ฟอร์มเต็มความกว้าง */
+}
+
+/* กำหนดขนาดให้ textarea และ button ยาวลงมาข้างล่าง */
+textarea {
+    width: 100%;  /* ให้ความกว้างของ textarea เท่ากับความกว้างของฟอร์ม */
+    height: 120px; /* ปรับความสูงของ textarea */
+    padding: 10px;  /* ปรับ padding ภายในเพื่อเพิ่มความสะดวก */
+    font-size: 16px;
+    box-sizing: border-box;  /* ทำให้ padding ไม่ล้นขอบ */
+    border-radius: 5px;  /* ทำให้มุมโค้ง */
+    border: 1px solid #ddd; /* สีขอบที่ละเอียด */
+    resize: vertical; /* ให้ผู้ใช้สามารถปรับขนาด textarea ได้แค่แนวตั้ง */
+    margin-bottom: 5px; /* ลดระยะห่างด้านล่างระหว่าง textarea และปุ่ม */
+}
+
+/* ปรับปุ่มให้ยาวลงมาข้างล่าง */
+button {
+    width: 100%;  /* ให้ปุ่มมีขนาดกว้างเท่ากับ textarea */
+    padding: 10px; /* ปรับขนาดปุ่ม */
+    background-color: #4CAF50; /* สีปุ่ม */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 5px; /* มุมโค้งให้ปุ่ม */
+}
+
+button:hover {
+    background-color: #45a049; /* สีปุ่มเมื่อ hover */
+}
+
+/* ปรับให้ปุ่ม "กลับไปยังหน้าแรก" */
+button[type="button"] {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* ปรับให้ฟอร์มและข้อความดูสะอาดตา */
+.chat-room {
+    margin-top: 80px; /* ปรับค่าตามความต้องการ */
+    padding: 20px;
+}
+
+.chat-room em {
+    font-size: inherit; /* ใช้ขนาดเดียวกับฟอนต์ของพาเรนต์ */
+    font-weight: bold; /* เพิ่มความหนาเท่า <strong> */
+    color: #333;
+}
+
+.message-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left; /* ตั้งให้ข้อความอยู่ทางซ้าย */
+    display: block;   /* ให้ label เป็น block เพื่อให้แสดงแยกจาก textarea */
+    margin-bottom: 5px; /* ให้ห่างจาก textarea เล็กน้อย */
+}
+
+/* ปรับให้ปุ่ม "กลับไปยังหน้าแรก" เป็นสีฟ้า */
+button[type="button"] {
+    background-color: #2196F3; /* สีฟ้า */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+button[type="button"]:hover {
+    background-color: #1976D2; /* สีฟ้าเข้มเมื่อ hover */
+}
